@@ -34,4 +34,12 @@ def sort_results(dict):
         highest = 0
     return order_list
 
-print(sort_results(letter_dictionary(file_contents)))
+def print_report(letter_list):
+    print(f"--- Begin report of {f.name} ---")
+    print(f"{words(file_contents)} words found in the document\n")
+    for letter in letter_list:
+        print(f"The {letter[0]} character was found {letter[1]} times")
+    print("--- End report ---")
+
+
+print_report(sort_results(letter_dictionary(file_contents)))
